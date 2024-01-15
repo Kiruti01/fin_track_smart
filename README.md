@@ -1,6 +1,6 @@
-# Finance Manager App
+# Fin Track Smart Manager
 
-This Finance Manager App is a web application built with Next.js, Tailwind CSS, and Firebase. It provides a user-friendly interface for managing income and expenses, helping users keep track of their financial transactions effectively.
+This Finance Track Smart Manager is a web application built with Next.js, Tailwind CSS, and Firebase. It provides a user-friendly interface for managing income and expenses, helping users keep track of their financial transactions effectively.
 
 ## Features
 
@@ -22,29 +22,27 @@ This Finance Manager App is a web application built with Next.js, Tailwind CSS, 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Kiruti01/finance-manager-app.git
+   git clone https://github.com/Kiruti01/fin_track_smart.git
 
    ```
 
-   **Start**
-
-1. ##Install Dependencies:
+2. ##Install Dependencies:
 
 bash
-cd finance-manager-app
+cd fin_track_smart
 npm install
 
-2. ##Configure Firebase:
+3. ##Configure Firebase:
 
 Create a Firebase project on Firebase Console.
 Obtain your Firebase configuration and replace it in the app's configuration file.
 
-3. ##Run the Application:
+4. ##Run the Application:
 
 bash
 npm run dev
 
-4. ##Open in Browser:
+5. ##Open in Browser:
    Open your browser and navigate to http://localhost:3000.
 
 ## **Contributing**
