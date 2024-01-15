@@ -26,23 +26,23 @@ This Finance Track Smart Manager is a web application built with Next.js, Tailwi
 
    ```
 
-2. ##Install Dependencies:
+2. **Install Dependencies:**
 
 bash
 cd fin_track_smart
 npm install
 
-3. ##Configure Firebase:
+3. **Configure Firebase:**
 
 Create a Firebase project on Firebase Console.
 Obtain your Firebase configuration and replace it in the app's configuration file.
 
-4. ##Run the Application:
+4. **Run the Application:**
 
 bash
 npm run dev
 
-5. ##Open in Browser:
+5. **Open in Browser:**
    Open your browser and navigate to http://localhost:3000.
 
 ## **Contributing**
