@@ -15,6 +15,9 @@ import SignIn from "@/components/SignIn";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Home() {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const [showAddIncomeModal, setShowAddIncomeModal] = useState(false);
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
 
@@ -24,17 +27,15 @@ export default function Home() {
   const { user } = useContext(authContext);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const newBalance =
-        income.reduce((total, i) => {
-          return total + i.amount;
-        }, 0) -
-        expenses.reduce((total, e) => {
-          return total + e.total;
-        }, 0);
+    const newBalance =
+      income.reduce((total, i) => {
+        return total + i.amount;
+      }, 0) -
+      expenses.reduce((total, e) => {
+        return total + e.total;
+      }, 0);
 
-      setBalance(newBalance);
-    }
+    setBalance(newBalance);
   }, [expenses, income]);
 
   if (!user) return <SignIn />;
