@@ -24,15 +24,17 @@ export default function Home() {
   const { user } = useContext(authContext);
 
   useEffect(() => {
-    const newBalance =
-      income.reduce((total, i) => {
-        return total + i.amount;
-      }, 0) -
-      expenses.reduce((total, e) => {
-        return total + e.total;
-      }, 0);
+    if (typeof window !== "undefined") {
+      const newBalance =
+        income.reduce((total, i) => {
+          return total + i.amount;
+        }, 0) -
+        expenses.reduce((total, e) => {
+          return total + e.total;
+        }, 0);
 
-    setBalance(newBalance);
+      setBalance(newBalance);
+    }
   }, [expenses, income]);
 
   if (!user) return <SignIn />;
