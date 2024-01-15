@@ -1,4 +1,11 @@
+"use client";
+
+import { useEffect } from "react";
+
 function Modal({ show, onClose, children }) {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   return (
     <div
       style={{

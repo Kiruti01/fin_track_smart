@@ -1,10 +1,14 @@
+"use client";
 import { ImStatsBars } from "react-icons/im";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { authContext } from "@/lib/store/auth-context";
 
 // profile Pic hi name, sign out
 
 function Nav() {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const { user, loading, logout } = useContext(authContext);
 
   return (

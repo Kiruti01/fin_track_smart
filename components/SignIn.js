@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+"use client";
+import React, { useContext, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { authContext } from "@/lib/store/auth-context";
 
 function SignIn() {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const { googleLoginHandler } = useContext(authContext);
   return (
     <main className="container max-w-2xl px-6 mx-auto">

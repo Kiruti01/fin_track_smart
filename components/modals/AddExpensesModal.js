@@ -1,10 +1,14 @@
+"use client";
 import Modal from "@/components/Modal";
-import { useState, useContext, useRef } from "react";
+import { useState, useContext, useRef, useEffect } from "react";
 import { financeContext } from "@/lib/store/finance-context";
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
 
 function AddExpensesModal({ show, onClose }) {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const [expenseAmount, setExpenseAmount] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [showAddExpense, setShowAddExpense] = useState(false);

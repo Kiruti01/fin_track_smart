@@ -1,4 +1,11 @@
+"use client";
+
+import { useEffect } from "react";
+
 export default function Head() {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   return (
     <>
       <title>Track Smart App</title>

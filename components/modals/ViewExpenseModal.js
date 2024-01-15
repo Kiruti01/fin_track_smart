@@ -1,11 +1,15 @@
+"use client";
 import Modal from "@/components/Modal";
 import { currencyFormatter } from "@/lib/utils";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { financeContext } from "@/lib/store/finance-context";
 import { toast } from "react-toastify";
 
 function ViewExpenseModal({ show, onclose, expense }) {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const { deleteExpenseItem, deleteExpenseCategory } =
     useContext(financeContext);
 

@@ -1,9 +1,13 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
 import { currencyFormatter } from "@/lib/utils";
 import ViewExpenseModal from "./modals/ViewExpenseModal";
 
 function ExpenseCategoryItem({ expense }) {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const [showViewExpenseModal, setViewExpenseModal] = useState(false);
 
   return (

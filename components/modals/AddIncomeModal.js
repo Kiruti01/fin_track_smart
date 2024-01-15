@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useEffect, useContext } from "react";
 import { currencyFormatter } from "@/lib/utils";
 import { toast } from "react-toastify";
@@ -10,6 +11,9 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { auth } from "@/lib/firebase";
 
 function AddIncomeModal({ show, onClose }) {
+  useEffect(() => {
+    const height = window.innerHeight;
+  }, []);
   const amountRef = useRef();
   const descriptionRef = useRef();
   const { income, addIncomeItem, removeIncomeItem } =
